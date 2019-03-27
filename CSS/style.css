@@ -4,8 +4,8 @@
 	background-color: #5b84d7;
 	width: 175px;
 	height: 90%;
-	position: absolute;
-	margin: 0;
+	position: fixed;
+	margin-top: 50px;
 	padding: 5px;
 }
 .nav-principal a {
@@ -16,8 +16,8 @@
 	text-shadow: 0 0 3px black;
 }
 
-.index-principal {
-	padding: 15px;
+.div-principal {
+	padding: 50px 15px 15px 15px;
 	margin: 0 0 0 185px;
 }
 
@@ -29,6 +29,7 @@
 	height: 50px;
 	width: 100%;
 	background-color: black;
+	position: fixed;
 }
 
 .titre-acceuil {
