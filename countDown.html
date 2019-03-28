@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compte à rebours</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <script>
+  // La date à laquelle on veut faire le compte à rebours
+  var countDownDate = new Date("May 17, 2019 12:00:00").getTime();
+
+  // Mettre à jour le compte à rebours à chaque seconde
+  var x = setInterval(function() {
+
+    // Obtenir la date et l'heure d'aujourd'hui
+    var now = new Date().getTime();
+
+    // Trouver la distance entre maintenant et la date du compte à rebours
+    var distance = countDownDate - now;
+
+    // Calcul du nombre de jours, heures, minutes et secondes
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Afficher le résultat dans l'élément qui a le id "camping"
+    document.getElementById("camping").innerHTML = days + " jours, " + hours + "h "
+    + minutes + "min. " + seconds + "sec. ";
+
+    // Si le compte à rebours est terminé, avertir 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("camping").innerHTML = "Évènnement terminé!";
+    }
+  }, 1000);
+  </script>
+</head>
+<body style="background-image: url('IMG/qbkls.png');">
+  <div class="div-banner">.</div>
+  <nav class="nav-principal">
+    <a href="index.html">Acceuil</a>
+    <a href="#">Redevance</a>
+    <a href="#">Actualité / Proposition d'activité</a>
+    <a href="#">Vote / Sondage</a>
+    <a href="countDown.html">Compte à rebours</a>
+    <a href="#">Informations importantes</a>
+    <a href="#">Fichiers importants</a>
+    <a href="LoremIpsum.html">Lorem Ipsum</a>
+  </nav>
+  <div class="div-principal">
+    <h1 class="titre-acceuil"> - Compte à rebours avant le prochain événement des Boys - </h1>
+
+    <table>
+      <tr>
+        <td>Camping des gars : </td>
+        <td>
+          <p class="countDown" id="camping"></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

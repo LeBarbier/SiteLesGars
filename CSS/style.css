@@ -37,6 +37,13 @@
 	font-style: italic;
 }
 
+.countDown {
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+	margin: 75px;
+}
+
 /* ----- Début de la section de déclaration des tags  ----- */
 body {
 	font-family: Verdana;
