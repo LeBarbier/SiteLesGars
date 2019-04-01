@@ -2,23 +2,37 @@
 .nav-principal {
 	display: inline-grid;
 	background-color: #5b84d7;
-	width: 175px;
-	height: 90%;
+	width: 160px;
+	height: 100%;
 	position: fixed;
-	margin-top: 50px;
-	padding: 5px;
+	padding: 50px 0 0 0;
 }
+
+.nav-principal div div {
+	text-align: right;
+	padding: 12px 3px 12px 0px;
+}
+
+.nav-principal div div:hover {
+	background-color: #98b2e6;
+}
+
 .nav-principal a {
 	text-decoration: none;
-	color: white;
-	margin: 15px;
-	font-weight: bold;
-	text-shadow: 0 0 3px black;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+    font-size: medium;
+}
+
+.nav-principal a:hover {
+	color: black;
+	text-shadow: 0 0 3px white;
 }
 
 .div-principal {
 	padding: 50px 15px 15px 15px;
-	margin: 0 0 0 185px;
+	margin: 0 0 0 170px;
 }
 
 .table-idee tr td {
@@ -30,6 +44,7 @@
 	width: 100%;
 	background-color: black;
 	position: fixed;
+	z-index: 1;
 }
 
 .titre-acceuil {
